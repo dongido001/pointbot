@@ -13,13 +13,40 @@ class RequestExploder{
       $cmdline = explode(' ', strtolower($request['text']));
 
      if(!in_array("to", $cmdline)){ return "keyword \"to\" not found on this request!"; }
+
+     if(in_array($what, array_keys($request))){ return $request[$what]; }
+
+     $point = $command = $receiver = $label = "";
+    //these are availbe commads that we accepts...
+     $availcmd = ["point", "command", "receiver", "label"];
+
+     foreach($cmdline as $cmd){
+        if($cmd == "add" OR $cmd = "remove"){
+        	$command = $cmd;
+        }
+        else if(is_numeric($cmd)){
+            $point = $cmd;
+        }
+        else if( $cmd[0] == '@'){
+            $receiver = $cmd;
+        }
+        else{
+        	$label . " " = $cmd;
+        }
+     }
+
+     if( $point == "" OR $command == "" OR $receiver == "" OR $label == "" ){ die("please folow our rule..."); }
+
+     if( in_array($what, $availcmd)){
+     	return $what;
+     }
       
-     return $cmdline;
+     return $what;
    }
 
 
    public static function checkIfIncomeReqestIsValid(){
-       var_dump($_GET['token']);
+
       	if(!isset($_GET['token'])  OR $_GET['token'] != "RKSDMDX1YBhJpqd4HsyickJ9"){
 
            die("We cant process this request at this time :'( , please contact the administrator.");
