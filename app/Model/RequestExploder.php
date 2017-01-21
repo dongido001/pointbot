@@ -34,10 +34,10 @@ class RequestExploder{
         	$label .=" " .$cmd;
         }
      }
+     echo $point; echo  $command; echo $receive; die();
+     if( $point == "" OR $command == "" OR $receiver == ""){ die("please folow our rule..."); }
 
-     if( $point == "" OR $command == "" OR $receiver == "" OR $label == "" ){ die("please folow our rule..."); }
-
-     if( in_array($what, $availcmd)){
+     if(in_array($what, $availcmd)){
      	return $what;
      }
       
