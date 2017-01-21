@@ -8,7 +8,7 @@ use App\Model\RequestExploder;
 class PointController extends Controller {
 
     public function __construct(){
-        //RequestExploder::checkIfIncomeReqestIsValid();
+        RequestExploder::checkIfIncomeReqestIsValid();
     }
     /**
      * This is the index page.
@@ -27,7 +27,6 @@ class PointController extends Controller {
      */
     public function add()
     {
-        var_dump($_GET);
        //verify the user is registered on our chanell AND user can give points
         RequestExploder::get("null", $_GET);
         $user = User::where('username', $username)->first();
