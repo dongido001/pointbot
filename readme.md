@@ -1,5 +1,4 @@
-<p align="center"><img src="https://cloud.githubusercontent.com/assets/807318/21964943/c2a4edfa-db55-11e6-9ae6-6532bf984599.png"></p>
-
+<h2 align="center"> PointBot </h2>
 <p align="center">PointBot is a slack bot that Organises points for your team...</p>
 
 <br/><br/>
