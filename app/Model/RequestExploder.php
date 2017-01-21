@@ -2,6 +2,9 @@
 
 class RequestExploder{
 
+  public function usage(){
+
+  }
 
   public static function get($what, $request){
 

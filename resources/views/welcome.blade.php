@@ -14,7 +14,11 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title"> PointBolt</div>
+                <div class="title"> 
+                    PointBolt 
+                       <br>
+                    <b> Onwuka Gideon &lt; / dongido &rt; </b>
+                </div>
             </div>
         </div>
     </body>
