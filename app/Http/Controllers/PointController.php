@@ -29,7 +29,10 @@ class PointController extends Controller {
     {
        //verify the user is registered on our chanell AND user can give points
 
-        echo RequestExploder::get("point", $_GET) ; die();
+        $point    = RequestExploder::get("point", $_GET);
+        $receiver = RequestExploder::get("receiver", $_GET);
+        $username = $_GET['user_name'];
+
         $user = User::where('username', $username)->first();
         if( $user AND $user->role > 0 ){
             die("We have added point to you");
