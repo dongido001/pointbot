@@ -31,7 +31,7 @@ class RequestExploder{
             $receiver = $cmd;
         }
         else{
-        	$label . " " = $cmd;
+        	$label .=" " .$cmd;
         }
      }
 
