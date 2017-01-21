@@ -21,7 +21,7 @@ class RequestExploder{
      $availcmd = ["point", "command", "receiver", "label"];
 
      foreach($cmdline as $cmd){
-        if($cmd == "add" OR $cmd = "remove"){
+        if($cmd == "add" OR $cmd == "remove"){
         	$command = $cmd;
         }
         else if(is_numeric($cmd)){
