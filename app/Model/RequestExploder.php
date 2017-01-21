@@ -17,8 +17,7 @@ class RequestExploder{
      if(in_array($what, array_keys($request))){ return $request[$what]; }
 
      $point = $command = $receiver = $label = "";
-    //these are availbe commads that we accepts...
-     $availcmd = ["point", "command", "receiver", "label"];
+
 
      foreach($cmdline as $cmd){
         if($cmd == "add" OR $cmd == "remove"){
@@ -34,11 +33,15 @@ class RequestExploder{
         	$label .=" " .$cmd;
         }
      }
-     echo $point; die();
+
+     //these are availbe commads that we accepts...
+     $availcmd = ["point" => $point, "command" => $command, 
+                 "receiver" => $receiver, "label" => $label];
+
      if( $point == "" OR $command == "" OR $receiver == ""){ die("please folow our rule..."); }
 
-     if(in_array($what, $availcmd)){
-     	return $what;
+     if(in_array($what, array_keys($availcmd))){
+     	return $availcmd[$what];
      }
       
      return $what;
