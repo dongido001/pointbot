@@ -11,7 +11,7 @@ class RequestExploder{
   	 if( empty($request) OR $request == NULL){ return "Empty Request :'( ";}
 
       $cmdline = explode(' ', strtolower($request['text']));
-
+var_dump($cmdline ); die();
      if(!in_array("to", $cmdline)){ return "keyword \"to\" not found on this request!"; }
 
      if(in_array($what, array_keys($request))){ return $request[$what]; }
