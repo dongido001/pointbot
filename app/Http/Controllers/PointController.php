@@ -28,8 +28,8 @@ class PointController extends Controller {
     public function add()
     {
        //verify the user is registered on our chanell AND user can give points
-        echo "sdfsd";
-        die(RequestExploder::get("point", $_GET));
+
+        echo RequestExploder::get("point", $_GET) ; die();
         $user = User::where('username', $username)->first();
         if( $user AND $user->role > 0 ){
             die("We have added point to you");
