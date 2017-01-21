@@ -17,7 +17,7 @@
                 <div class="title"> 
                     PointBolt 
                        <br>
-                    <b> Onwuka Gideon &lt; / dongido &rt; </b>
+                    <b> Onwuka Gideon &lt; / dongido > </b>
                 </div>
             </div>
         </div>

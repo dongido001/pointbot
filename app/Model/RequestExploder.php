@@ -20,7 +20,7 @@ class RequestExploder{
 
    public static function checkIfIncomeReqestIsValid(){
       	
-      	if(!isset($_GET['token'])  OR $_GET['token'] != "TOKEN_FROM_YOUR_TEAM"){
+      	if(!isset($_GET['token'])  OR $_GET['token'] != "RKSDMDX1YBhJpqd4HsyickJ9"){
 
            die("We cant process this request at this time :'( , please contact the administrator.");
         }
