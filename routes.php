@@ -12,3 +12,5 @@ $router->middleware('auth', App\Http\Middleware\Authenticate::class);
 // -------------------------------------------------
 
 $router->get('/', 'HomeController@index');
+
+$router->get('/points/add', 'PointController@add');

@@ -20,9 +20,9 @@ return [
 
     'mysql' => [
         'host'      => 'localhost',
-        'database'  => 'homestead',
+        'database'  => 'pointbot',
         'username'  => 'root',
-        'password'  => 'secret',
+        'password'  => '',
         'charset'   => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix'    => '',

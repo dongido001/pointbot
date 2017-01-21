@@ -2,13 +2,12 @@
 
 namespace App\Model;
 
-
-class User extends Model {
+class Points extends Model {
 
     /**
      * Name of the table.
      *
      * @var string
      */
-    protected $table = 'users';
+    protected $table = 'points';
 }

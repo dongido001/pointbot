@@ -14,7 +14,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">{{ $sitename }}</div>
+                <div class="title"> PointBolt</div>
             </div>
         </div>
     </body>

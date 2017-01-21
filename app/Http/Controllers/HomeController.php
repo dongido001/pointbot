@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Database\Capsule\Manager as Capsule;
-
 class HomeController extends Controller {
 
     /**
