@@ -34,7 +34,7 @@ class RequestExploder{
         	$label .=" " .$cmd;
         }
      }
-     echo $command; die();
+     echo $point; die();
      if( $point == "" OR $command == "" OR $receiver == ""){ die("please folow our rule..."); }
 
      if(in_array($what, $availcmd)){
