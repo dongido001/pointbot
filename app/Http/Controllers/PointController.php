@@ -50,17 +50,12 @@ class PointController extends Controller {
                $re = Points::where('username', $receiver)->update(['points'=> $npoint]);
             }
             if($re){
-                $settings = [
-                     'username' => '@point',
-                     'channel' => '#general',
-                     'link_names' => true
-                 ];
 
-                $client = new \Maknz\Slack\Client('https://hooks.slack.com/services/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', $settings);
+                $client = new \Maknz\Slack\Client('https://hooks.slack.com/services/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');
                 $client->to($reciver)->send('@'. $username . " just added point to you! :joy:");
-                $client->to('#'. $_GET['channel_name'])->send(':white_check_mark: You have added {$point} points to {$receiver}');
+                $client->to('#'. $_GET['channel_name'])->send(":white_check_mark: You have added {$point} points to {$receiver}");
 
-                echo(":white_check_mark: You have added {$point} points to {$receiver}");die();
+                die(":white_check_mark: You have added {$point} points to {$receiver}");
             } die("-_- failed adding point as this moment, you might want to contact the admin...");
             
         }
