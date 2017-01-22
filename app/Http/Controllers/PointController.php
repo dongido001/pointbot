@@ -60,7 +60,7 @@ class PointController extends Controller {
                 $client->to($reciver)->send('@'. $username . " just added point to you! :joy:");
                 $client->to('#'. $_GET['channel_name'])->send(':white_check_mark: You have added {$point} points to {$receiver}');
 
-                die(":white_check_mark: You have added {$point} points to {$receiver}");
+                echo(":white_check_mark: You have added {$point} points to {$receiver}");die();
             } die("-_- failed adding point as this moment, you might want to contact the admin...");
             
         }
