@@ -33,7 +33,7 @@ class PointController extends Controller {
         $point    = RequestExploder::get("point", $_GET);
         $receiver = RequestExploder::get("receiver", $_GET);
         $username = $_GET['user_name'];
-        $prepoint = Points::where('username', $receiver)->first()->points;
+        $prepoint = (is_object($s) == $s = Points::where('username', $receiver)->first()) ? $s->points : 0;
         $user     = User::where('username', $username)->first();
 
         if( $user AND $user->role > 0 ){
