@@ -22,7 +22,7 @@ return [
         'host'      => 'sql8.freesqldatabase.com',
         'database'  => 'sql8155055',
         'username'  => 'sql8155055',
-        'password'  => '9C85JKYVR7',
+        'password'  => '9C85JKYVR7',  
         'charset'   => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix'    => '',

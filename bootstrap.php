@@ -22,7 +22,7 @@ defined('SLACK_ID')         OR define('SLACK_ID', "RKSDMDX1YBhJpqd4HsyickJ9");
 //  Display errors...
 // -----------------------------------------------------------
 error_reporting(E_ALL);
-ini_set("display_errors", 1);
+ini_set("display_errors", 1); 
 
 // ------------------------------------------------------------
 // Load the container and plug all things
