@@ -16,6 +16,12 @@ defined('NIMBLE_STORAGE')   OR define('NIMBLE_STORAGE', __DIR__."/storage");
 defined('NIMBLE_PUBLIC')    OR define('NIMBLE_PUBLIC', NIMBLE_ROOT."/public");
 defined('NIMBLE_RESOURCES') OR define('NIMBLE_RESOURCES', NIMBLE_ROOT."/resources");
 
+//------------------------------------------------------------
+//  Display errors...
+// -----------------------------------------------------------
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 // ------------------------------------------------------------
 // Load the container and plug all things
 // ------------------------------------------------------------
