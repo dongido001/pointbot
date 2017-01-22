@@ -35,7 +35,12 @@ class PointController extends Controller {
 
         $user = User::where('username', $username)->first();
         if( $user AND $user->role > 0 ){
-            die("We have added point to you");
+            $re = Points::where('username',$receiver)
+                        ->insert(['username'=>, $receiver, 'points'=>, $point]);
+            if($re){
+                die(":checked: You have added point to {$receiver}");
+            } die("-_- failed adding point as this moment, you might want to contact the admin...");
+            
         }
         else{
             die("Sorry but you can not assign point to any user :confused: ");
