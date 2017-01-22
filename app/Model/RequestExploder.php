@@ -34,7 +34,7 @@ class RequestExploder{
         }
      }
 
-     //these are availbe commads that we accepts...
+     //these are availabe commads that we accepts...
      $availcmd = ["point" => $point, "command" => $command, 
                  "receiver" => $receiver, "label" => $label];
 

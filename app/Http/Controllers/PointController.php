@@ -32,11 +32,11 @@ class PointController extends Controller {
         $point    = RequestExploder::get("point", $_GET);
         $receiver = RequestExploder::get("receiver", $_GET);
         $username = $_GET['user_name'];
+        $prepoint = Points::where('username', $receiver)->first()->points;
+        $user     = User::where('username', $username)->first();
 
-        $user = User::where('username', $username)->first();
         if( $user AND $user->role > 0 ){
-            $re = Points::where('username',$receiver)
-                        ->insert(['username'=>, $receiver, 'points'=>, $point]);
+            $re = Points::updateOrCreate(['username' => $receiver], 'points'=> ($point+$prepoint) );
             if($re){
                 die(":checked: You have added point to {$receiver}");
             } die("-_- failed adding point as this moment, you might want to contact the admin...");
