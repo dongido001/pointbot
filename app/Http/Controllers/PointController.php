@@ -38,9 +38,9 @@ class PointController extends Controller {
         $user     = User::where('username', $username)->first();
 
         if( $user AND $user->role > 0 ){
-            
+
             if( (!is_object($s)) ){ //insert
-                $pointer = new Point;
+                $pointer = new Points;
                 $pointer->username = $receiver;
                 $pointer->points = $point;
                 $re = $point->save(); 
