@@ -53,7 +53,7 @@ class PointController extends Controller {
 
                 $client = new \Maknz\Slack\Client('https://hooks.slack.com/services/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');
                 $client->to($receiver)->send('@'. $username . " just added point to you! :joy:");
-                $client->to('#'. $_GET['channel_name'])->send(":white_check_mark: You have added {$point} points to {$receiver}");
+                $client->to('#'. $_GET['channel_name'])->send(":white_check_mark:". '@'. $username . " You just added {$point} points to {$receiver}");
 
                 die(":white_check_mark: You have added {$point} points to {$receiver}");
             } die("-_- failed adding point as this moment, you might want to contact the admin...");
