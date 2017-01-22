@@ -34,7 +34,7 @@ class PointController extends Controller {
         $receiver = RequestExploder::get("receiver", $_GET);
         $username = $_GET['user_name'];
         $s        = Points::where('username', $receiver)->first();
-        $point = (is_object($s)) ? $s->points + $point : $point;
+        $npoint = (is_object($s)) ? $s->points + $point : $point;
         $user     = User::where('username', $username)->first();
 
         if( $user AND $user->role > 0 ){
@@ -42,15 +42,25 @@ class PointController extends Controller {
             if( (!is_object($s)) ){ //insert
                 $pointer = new Points;
                 $pointer->username = $receiver;
-                $pointer->points = $point;
+                $pointer->points = $npoint;
                 $re = $pointer->save(); 
             } //update
             else
             {
-               $re = Points::where('username', $receiver)->update(['points'=> $point]);
+               $re = Points::where('username', $receiver)->update(['points'=> $npoint]);
             }
             if($re){
-                die(":checked: You have added point to {$receiver}");
+                $settings = [
+                     'username' => '@point',
+                     'channel' => '#general',
+                     'link_names' => true
+                 ];
+
+                $client = new Maknz\Slack\Client('https://hooks.slack.com/services/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', $settings);
+                $client->to($reciver)->send('@'. $username . " just added point to you! :joy:");
+                $client->to('#'. $_GET['channel_name'])->send(':white_check_mark: You have added {$point} points to {$receiver}');
+
+                die(":white_check_mark: You have added {$point} points to {$receiver}");
             } die("-_- failed adding point as this moment, you might want to contact the admin...");
             
         }

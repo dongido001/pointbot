@@ -2,9 +2,19 @@
 
 class RequestExploder{
 
-  public function usage(){
+  /*
+  * Command Argument Usage
+  */
 
-  }
+  CONST Usage1 = "/point add 60 to @gideon";
+  CONST Usage2 = "/point add 60 from @gideon";
+  CONST Usage3 = "@point add 60 to @gideon";
+  CONST Usage4 = "@point remove 60 from @gideon";
+
+
+  /*
+  * Explodes command
+  */
 
   public static function get($what, $request){
      
@@ -38,7 +48,7 @@ class RequestExploder{
      $availcmd = ["point" => $point, "command" => $command, 
                  "receiver" => $receiver, "label" => $label];
 
-     if( $point == "" OR $command == "" OR $receiver == ""){ die("please folow our rule..."); }
+     if( $point == "" OR $command == "" OR $receiver == ""){ die("please folow our rule...". PHP_EOL . Usage1); }
 
      if(in_array($what, array_keys($availcmd))){
      	return $availcmd[$what];
@@ -50,7 +60,7 @@ class RequestExploder{
 
    public static function checkIfIncomeReqestIsValid(){
         
-      	if(!isset($_GET['token'])  OR $_GET['token'] != "RKSDMDX1YBhJpqd4HsyickJ9"){
+      	if(!isset($_GET['token'])  OR $_GET['token'] != SLACK_ID){
 
            die("We cant process this request at this time :'( , please contact the administrator.");
         }
