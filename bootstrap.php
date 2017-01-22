@@ -15,7 +15,7 @@ defined('NIMBLE_APP')       OR define('NIMBLE_APP', NIMBLE_ROOT."/app");
 defined('NIMBLE_STORAGE')   OR define('NIMBLE_STORAGE', __DIR__."/storage");
 defined('NIMBLE_PUBLIC')    OR define('NIMBLE_PUBLIC', NIMBLE_ROOT."/public");
 defined('NIMBLE_RESOURCES') OR define('NIMBLE_RESOURCES', NIMBLE_ROOT."/resources");
-defined('SLACK_ID')         OR define('SLACK_ID', "RKSDMDX1YBhJpqd4HsyickJ9");
+defined('SLACK_ID')         OR define('SLACK_ID', "slack id");
 
 
 //------------------------------------------------------------
