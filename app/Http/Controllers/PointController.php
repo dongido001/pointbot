@@ -43,7 +43,7 @@ class PointController extends Controller {
                 $pointer = new Points;
                 $pointer->username = $receiver;
                 $pointer->points = $point;
-                $re = $point->save(); 
+                $re = $pointer->save(); 
             } //update
             else
             {
